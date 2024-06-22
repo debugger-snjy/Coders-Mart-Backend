@@ -9,13 +9,10 @@ import { APIResponse } from "../utils/apiResponse.js"
 import User from "../models/user.model.js";
 
 // Importing Validations
-import { isAnyFieldEmpty, isEmailValid, isEmptyField, isMinMaxLengthValid, isValidName, isValidPassword, isValidPhoneNumber } from "../utils/validation.js";
+import { isAnyFieldEmpty, isEmailValid, isValidName, isValidPassword, isValidPhoneNumber } from "../utils/validation.js";
 
 // Importing the jwt package
 import jwt from 'jsonwebtoken';
-
-// Importing mongoose Package
-import mongoose from "mongoose";
 
 
 // ====================================================================================================================================================

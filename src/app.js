@@ -13,17 +13,12 @@ import { APIResponse } from "./utils/apiResponse.js";
 const app = express();
 
 // Adding the cors in the application
-// app.use(cors());
-// we can add the options to the cors as well
 app.use(cors({
     origin: process.env.CROSS_ORIGIN,
     credentials: true
 }))
 
 // This is for the Data that we get from Forms
-// Earlier, when the Express was not able to take the json responses, 
-// we use different packages like body-parser, But now in express, we use the in-built middleware of the express
-// No need for body-parser now
 app.use(express.json({
     limit: process.env.JSON_LIMIT
 }))
@@ -56,8 +51,10 @@ app.get("/v1/api/test/error", (req, res) => {
 
 // Adding User Routes
 import userRoutes from "./routes/user.routes.js";
+import productRoutes from "./routes/product.routes.js";
 
-app.use("/v1/api", userRoutes)
+app.use("/v1/api/user", userRoutes)
+app.use("/v1/api/products", productRoutes)
 
 // Exporting the app in default format - i.e, no need to use object destructuring while importing
 export default app;

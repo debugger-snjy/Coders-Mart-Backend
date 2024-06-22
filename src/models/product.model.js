@@ -15,9 +15,13 @@ const productSchema = new Schema(
             type: Number,
             required: true,
         },
-        productImages: [{
+        productImage: {
             type: String,
-        }],
+        },
+        productInStock: {
+            type: Number,
+            default: 1
+        }
     },
     { timestamps: true }
 );

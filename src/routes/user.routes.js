@@ -12,21 +12,21 @@ const userRouter = Router();
 // ====================================================================================================================================================
 // MARK: Register Route
 // Method : POST
-userRouter.route("/user/register").post(createUser)
+userRouter.route("/register").post(createUser)
 
 
 
 // ====================================================================================================================================================
 // MARK: Login Route
 // Method : POST
-userRouter.route("/user/login").post(loginUser)
+userRouter.route("/login").post(loginUser)
 
 
 
 // ====================================================================================================================================================
 // MARK: Current User Data Route
 // Method : POST
-userRouter.route("/user/get").get(
+userRouter.route("/get").get(
     verifyJWT,
     getCurrentUser
 )
@@ -36,14 +36,14 @@ userRouter.route("/user/get").get(
 // ====================================================================================================================================================
 // MARK: Logout Route
 // Method : POST
-userRouter.route("/user/logout").post(logoutUser)
+userRouter.route("/logout").post(logoutUser)
 
 
 
 // ====================================================================================================================================================
 // MARK: Update User Route
 // Method : POST
-userRouter.route("/user/:id").put(
+userRouter.route("/:id").put(
     verifyJWT,
     updateAccountDetails
 )
