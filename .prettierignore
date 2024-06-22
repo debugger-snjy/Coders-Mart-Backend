@@ -1,0 +1,9 @@
+# It will contain all the files where we don't want to apply the prettier settings
+
+/.vscode
+/node_modules
+./dist
+
+*.env
+.env
+.env.*
