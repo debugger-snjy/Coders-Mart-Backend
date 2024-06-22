@@ -45,13 +45,13 @@ app.use(cookieParser())
 // Testing Route for Server Alive
 app.get("/v1/api/test/server", (req, res) => {
     console.log("[src/app.js] Route Tested Successfully")
-    new APIResponse(200, { "Server": "Running" }, "Ok").send(res)
+    return new APIResponse(200, { "Server": "Running" }, "Ok").send(res)
 })
 
 // Testing Route For Sending Error
 app.get("/v1/api/test/error", (req, res) => {
     console.log("[src/app.js] Error Route Tested Successfully")
-    new APIError(400, "Error Testing").send(res)
+    return new APIError(400, "Error Testing").send(res)
 })
 
 // Adding User Routes
