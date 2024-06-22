@@ -7,9 +7,6 @@ class APIError {
         // Status Code that we want to set for the Error
         this.statusCode = statusCode;
 
-        // Used to store any extra data that we want to include with the error for debugging or logging
-        this.data = null;
-
         // Error message that describes what went wrong
         this.message = message;
 
@@ -19,6 +16,17 @@ class APIError {
         // An Array that can hold multiple error details
         this.errors = errors;
 
+    }
+
+    // Created the Class Method to Send the Error Response
+    send(res) {
+        return res
+            .status(this.statusCode)
+            .json({
+                message: this.message,
+                success: this.success,
+                error: this.errors
+            })
     }
 }
 

@@ -17,6 +17,17 @@ class APIResponse {
         this.success = statusCode < 400;
 
     }
+
+    // Created the Class Method to Send the Success Response
+    send(res) {
+        return res
+            .status(this.statusCode)
+            .json({
+                data: this.data,
+                message: this.message,
+                success: this.success,
+            })
+    }
 }
 
 // Exporting the API Response Class
