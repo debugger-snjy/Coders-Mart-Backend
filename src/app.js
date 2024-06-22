@@ -6,6 +6,8 @@ import cookieParser from "cookie-parser";
 
 // Importing the cors
 import cors from "cors";
+import { APIError } from "./utils/apiError.js";
+import { APIResponse } from "./utils/apiResponse.js";
 
 // Creating an Express application
 const app = express();
@@ -37,14 +39,25 @@ app.use(cookieParser())
 
 
 
-// ====================================================================================================================
+// ====================================================================================================================================================
 // Adding Routes For the Application
 
 // Testing Route for Server Alive
 app.get("/v1/api/test/server", (req, res) => {
     console.log("[src/app.js] Route Tested Successfully")
-    res.send({ message: "Ok", status: "Server is Running !!" })
+    new APIResponse(200, { "Server": "Running" }, "Ok").send(res)
 })
+
+// Testing Route For Sending Error
+app.get("/v1/api/test/error", (req, res) => {
+    console.log("[src/app.js] Error Route Tested Successfully")
+    new APIError(400, "Error Testing").send(res)
+})
+
+// Adding User Routes
+import userRoutes from "./routes/user.routes.js";
+
+app.use("/v1/api", userRoutes)
 
 // Exporting the app in default format - i.e, no need to use object destructuring while importing
 export default app;
