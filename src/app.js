@@ -49,12 +49,20 @@ app.get("/v1/api/test/error", (req, res) => {
     return new APIError(400, "Error Testing").send(res)
 })
 
-// Adding User Routes
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// Importing Different Route Files
+
 import userRoutes from "./routes/user.routes.js";
 import productRoutes from "./routes/product.routes.js";
+import cartRoutes from "./routes/cart.routes.js";
+import orderRoutes from "./routes/order.routes.js";
 
+
+// Adding the Routes to the Application
 app.use("/v1/api/user", userRoutes)
 app.use("/v1/api/products", productRoutes)
+app.use("/v1/api/cart", cartRoutes)
+app.use("/v1/api/order", orderRoutes)
 
 // Exporting the app in default format - i.e, no need to use object destructuring while importing
 export default app;

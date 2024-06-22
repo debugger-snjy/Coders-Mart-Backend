@@ -10,13 +10,40 @@ const CartSchema = new Schema(
         },
 
         // We will give reference to the products model ==> It like a foreign key
-        cartItems: [{
-            type: SchemaTypes.ObjectId,
-            ref: "product",
-            required: true,
-        }],
+        cartItems: [
+            {
+                itemID: {
+                    type: SchemaTypes.ObjectId,
+                    ref: "product",
+                    required: true,
+                },
+                itemName: {
+                    type: String,
+                    required: true,
+                },
+                itemDescription: {
+                    type: String,
+                    required: true,
+                },
+                itemPrice: {
+                    type: Number,
+                    required: true,
+                },
+                itemImage: {
+                    type: String,
+                },
+                quantity: {
+                    type: Number,
+                    default: 1,
+                    required: true
+                },
+                totalPrice:{
+                    type:Number,
+                }
+            }
+        ],
 
-        totalAmount: {
+        cartAmount: {
             type: Number,
             required: true,
             default: 0

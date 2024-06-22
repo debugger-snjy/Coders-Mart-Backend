@@ -84,7 +84,7 @@ const addStaticProducts = asyncPromiseHandler(async (req, res) => {
     const deletedProducts = await Product.deleteMany({});
 
     if (!deletedProducts) {
-        console.log("[src/controllers/product.controller.js] Error : ");
+        console.log("[src/controllers/product.controller.js] Error : Previous Products are NOT Deleted");
         return new APIError(400, "Previous Products are NOT Deleted").send(res);
     }
 
@@ -92,7 +92,7 @@ const addStaticProducts = asyncPromiseHandler(async (req, res) => {
     const addedProducts = await Product.insertMany(allAvailableProducts)
 
     if (!addedProducts) {
-        console.log("[src/controllers/product.controller.js] Error : ");
+        console.log("[src/controllers/product.controller.js] Error : New Products are NOT Added");
         return new APIError(400, "New Products are NOT Added").send(res);
     }
 
@@ -113,8 +113,8 @@ const getAllProducts = asyncPromiseHandler(async (req, res, next) => {
     const allProducts = await Product.find({});
 
     if (!allProducts) {
-        console.log("[src/controllers/product.controller.js] Error : ");
-        new APIError(400, "No Products Found !!").send(res);
+        console.log("[src/controllers/product.controller.js] Error : No Products Found ");
+        return new APIError(400, "No Products Found !!").send(res);
     }
 
     // Returning the Response

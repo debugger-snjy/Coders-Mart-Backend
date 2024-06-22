@@ -276,7 +276,7 @@ const updateAccountDetails = asyncPromiseHandler(async (req, res) => {
     const loggedInUser = req.user;
 
     if (!loggedInUser) {
-        console.log("[src/controllers/user.controller.js] Error : ");
+        console.log("[src/controllers/user.controller.js] Error : Unauthorized Access");
         return new APIError(401, "Unauthorized Access").send(res);
     }
 

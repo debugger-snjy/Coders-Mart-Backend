@@ -10,16 +10,49 @@ const orderSchema = new Schema(
         },
 
         // We will give reference to the products model ==> It like a foreign key
-        orderItems: [{
-            type: SchemaTypes.ObjectId,
-            ref: "product",
-            required: true,
-        }],
+        orderItems: [
+            {
+                itemID: {
+                    type: SchemaTypes.ObjectId,
+                    ref: "product",
+                    required: true,
+                },
+                itemName: {
+                    type: String,
+                    required: true,
+                },
+                itemDescription: {
+                    type: String,
+                    required: true,
+                },
+                itemPrice: {
+                    type: Number,
+                    required: true,
+                },
+                itemImage: {
+                    type: String,
+                },
+                quantity: {
+                    type: Number,
+                    default: 1,
+                    required: true
+                },
+                totalPrice: {
+                    type: Number,
+                }
+            }
+        ],
 
-        totalAmount: {
+        orderAmount: {
             type: Number,
             required: true,
             default: 0
+        },
+
+        paymentMode: {
+            type: String,
+            enum: ["CHEQUE", "CASH"],
+            required: true
         }
     },
     { timestamps: true }
