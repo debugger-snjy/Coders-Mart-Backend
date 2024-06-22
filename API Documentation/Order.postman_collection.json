@@ -1,0 +1,151 @@
+{
+	"info": {
+		"_postman_id": "d4e8286f-5044-418e-be3c-e7d046f73f9e",
+		"name": "Order",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "33156513",
+		"_collection_link": "https://interstellar-shadow-108052.postman.co/workspace/Coder's-Mart~6c9dba5f-f5f2-4419-bac2-a400098e421c/collection/33156513-d4e8286f-5044-418e-be3c-e7d046f73f9e?action=share&source=collection_link&creator=33156513"
+	},
+	"item": [
+		{
+			"name": "Add Order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"paymentMode\":\"CASH\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{server}}/order/"
+			},
+			"response": [
+				{
+					"name": "Add Order",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"paymentMode\":\"CASH\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{server}}/order/"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "657"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"291-KfLVwjokiQkXgzIhX7uHxTl25Pc\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 22 Jun 2024 20:19:02 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 200,\n    \"data\": {\n        \"owner\": \"6676ac29837f6b4ba97ff375\",\n        \"orderItems\": [\n            {\n                \"itemID\": \"6676bf3abcd7eee8e25fbfb5\",\n                \"itemName\": \"Saucony Endorphin Speed\",\n                \"itemDescription\": \"The Saucony Endorphin Speed features a responsive nylon plate and PWRRUN PB cushioning.\",\n                \"itemPrice\": 18500,\n                \"itemImage\": \"https://images.unsplash.com/photo-1595341888016-a392ef81b7de\",\n                \"quantity\": 2,\n                \"totalPrice\": 37000,\n                \"_id\": \"66773191eb780f8c5fbf9999\"\n            }\n        ],\n        \"orderAmount\": 37000,\n        \"paymentMode\": \"CASH\",\n        \"_id\": \"667731b66533dc707b031f42\",\n        \"createdAt\": \"2024-06-22T20:19:02.069Z\",\n        \"updatedAt\": \"2024-06-22T20:19:02.069Z\",\n        \"__v\": 0\n    },\n    \"message\": \"Order Added Successfully, Your Cart is Empty Now !!\",\n    \"success\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "Get All Orders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{server}}/order/"
+			},
+			"response": [
+				{
+					"name": "Get All Orders",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "{{server}}/order/"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "650"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"28a-R5oV0uCxNP6G+KsZcec8NrOm4wQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 22 Jun 2024 20:19:19 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 200,\n    \"data\": {\n        \"orders\": [\n            {\n                \"_id\": \"667731b66533dc707b031f42\",\n                \"owner\": \"6676ac29837f6b4ba97ff375\",\n                \"orderItems\": [\n                    {\n                        \"itemID\": \"6676bf3abcd7eee8e25fbfb5\",\n                        \"itemName\": \"Saucony Endorphin Speed\",\n                        \"itemDescription\": \"The Saucony Endorphin Speed features a responsive nylon plate and PWRRUN PB cushioning.\",\n                        \"itemPrice\": 18500,\n                        \"itemImage\": \"https://images.unsplash.com/photo-1595341888016-a392ef81b7de\",\n                        \"quantity\": 2,\n                        \"totalPrice\": 37000,\n                        \"_id\": \"66773191eb780f8c5fbf9999\"\n                    }\n                ],\n                \"orderAmount\": 37000,\n                \"paymentMode\": \"CASH\",\n                \"createdAt\": \"2024-06-22T20:19:02.069Z\",\n                \"updatedAt\": \"2024-06-22T20:19:02.069Z\",\n                \"__v\": 0\n            }\n        ]\n    },\n    \"message\": \"All Orders Fetched Successfully\",\n    \"success\": true\n}"
+				}
+			]
+		}
+	]
+}

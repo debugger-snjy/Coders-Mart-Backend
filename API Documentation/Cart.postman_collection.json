@@ -1,0 +1,684 @@
+{
+	"info": {
+		"_postman_id": "decc9ec8-900d-4e07-b26d-cfda20af69e5",
+		"name": "Cart",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "33156513",
+		"_collection_link": "https://interstellar-shadow-108052.postman.co/workspace/Coder's-Mart~6c9dba5f-f5f2-4419-bac2-a400098e421c/collection/33156513-decc9ec8-900d-4e07-b26d-cfda20af69e5?action=share&source=collection_link&creator=33156513"
+	},
+	"item": [
+		{
+			"name": "Add Item in Cart",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productID\":\"6676bf3abcd7eee8e25fbfb5\",\r\n    \"quantity\":2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{server}}/cart/"
+			},
+			"response": [
+				{
+					"name": "Add Item in Cart",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productID\":\"6676bf3abcd7eee8e25fbfae\",\r\n    \"quantity\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{server}}/cart/"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "438"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1b6-PLGm01eJLeFyQG7CFUlc6vp5jNY\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 22 Jun 2024 14:12:19 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 200,\n    \"data\": {\n        \"_id\": \"6676cc1aa5ce4dcbbec35f89\",\n        \"owner\": \"6676ac29837f6b4ba97ff375\",\n        \"cartItems\": [\n            {\n                \"item\": \"6676bf3abcd7eee8e25fbfad\",\n                \"quantity\": 6,\n                \"_id\": \"6676cc1aa5ce4dcbbec35f8a\"\n            },\n            {\n                \"item\": \"6676bf3abcd7eee8e25fbfae\",\n                \"quantity\": 3,\n                \"_id\": \"6676dbbd2df4cca6e0ee52fe\"\n            }\n        ],\n        \"totalAmount\": 0,\n        \"createdAt\": \"2024-06-22T13:05:30.117Z\",\n        \"updatedAt\": \"2024-06-22T14:12:19.082Z\",\n        \"__v\": 0\n    },\n    \"message\": \"Item Added in the Cart Successfully\",\n    \"success\": true\n}"
+				},
+				{
+					"name": "Add Item in Cart 2",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productID\":\"6676bf3abcd7eee8e25fbfae\",\r\n    \"quantity\":2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{server}}/cart/"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "598"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"256-X/aLGLvNm2mGgEbqgpIY9fntiRg\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 22 Jun 2024 17:49:29 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 200,\n    \"data\": {\n        \"_id\": \"66770e3e30a81aa9e7f10e8d\",\n        \"owner\": \"6676ac29837f6b4ba97ff375\",\n        \"cartItems\": [\n            {\n                \"itemID\": \"6676bf3abcd7eee8e25fbfae\",\n                \"itemName\": \"Puma RS-X\",\n                \"itemDescription\": \"The Puma RS-X features a chunky design and bold colorways, combining style and comfort.\",\n                \"itemPrice\": 15500,\n                \"itemImage\": \"https://images.unsplash.com/photo-1542291026-7eec264c27ff\",\n                \"quantity\": 4,\n                \"totalPrice\": 62000,\n                \"_id\": \"66770e3e30a81aa9e7f10e8e\"\n            }\n        ],\n        \"totalAmount\": 0,\n        \"createdAt\": \"2024-06-22T17:47:42.739Z\",\n        \"updatedAt\": \"2024-06-22T17:49:29.968Z\",\n        \"__v\": 0\n    },\n    \"message\": \"Item Added in the Cart Successfully\",\n    \"success\": true\n}"
+				},
+				{
+					"name": "Add Item in Cart 3",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productID\":\"6676bf3abcd7eee8e25fbfb5\",\r\n    \"quantity\":2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{server}}/cart/"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1326"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"52e-O0/hL9ZsVQiiwRaNGZk2IdAU+HM\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 22 Jun 2024 19:03:38 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 200,\n    \"data\": {\n        \"_id\": \"667714b3bb7019aa67a4ae1b\",\n        \"owner\": \"6676ac29837f6b4ba97ff375\",\n        \"cartItems\": [\n            {\n                \"itemID\": \"6676bf3abcd7eee8e25fbfaf\",\n                \"itemName\": \"Reebok Nano X1\",\n                \"itemDescription\": \"The Reebok Nano X1 is designed for high-performance training, offering stability and support.\",\n                \"itemPrice\": 14000.75,\n                \"itemImage\": \"https://images.unsplash.com/photo-1530389912609-9a007b3c38a4\",\n                \"quantity\": 2,\n                \"totalPrice\": 28001.5,\n                \"_id\": \"667714b3bb7019aa67a4ae1c\"\n            },\n            {\n                \"itemID\": \"6676bf3abcd7eee8e25fbfad\",\n                \"itemName\": \"Adidas Ultra boost 21\",\n                \"itemDescription\": \"The Adidas Ultra boost 21 features responsive cushioning and a lightweight design, perfect for runners.\",\n                \"itemPrice\": 18999.99,\n                \"itemImage\": \"https://images.unsplash.com/photo-1505248254168-1de4e1abfa78\",\n                \"quantity\": 2,\n                \"totalPrice\": 37999.98,\n                \"_id\": \"667714d76a30b486a4ebad16\"\n            },\n            {\n                \"itemID\": \"6676bf3abcd7eee8e25fbfb5\",\n                \"itemName\": \"Saucony Endorphin Speed\",\n                \"itemDescription\": \"The Saucony Endorphin Speed features a responsive nylon plate and PWRRUN PB cushioning.\",\n                \"itemPrice\": 18500,\n                \"itemImage\": \"https://images.unsplash.com/photo-1595341888016-a392ef81b7de\",\n                \"quantity\": 2,\n                \"totalPrice\": 37000,\n                \"_id\": \"6677200a6d5ed916baf77dae\"\n            }\n        ],\n        \"cartAmount\": 103001.48,\n        \"createdAt\": \"2024-06-22T18:15:15.513Z\",\n        \"updatedAt\": \"2024-06-22T19:03:38.143Z\",\n        \"__v\": 0\n    },\n    \"message\": \"Item Added in the Cart Successfully\",\n    \"success\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "Removing Item From Cart",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{server}}/cart/item/:id",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"cart",
+						"item",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "6676bf3abcd7eee8e25fbfb5"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Removing Item From Cart",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/cart/item/:id",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"cart",
+								"item",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "6676bf3abcd7eee8e25fbfb5"
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "75"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"4b-eZ9T9AjoCAikO6uZYY3K1oISoPQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 22 Jun 2024 19:48:40 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Item Doesn't Exists in Your Cart !\",\n    \"success\": false,\n    \"error\": []\n}"
+				}
+			]
+		},
+		{
+			"name": "Update Quantity In Cart Item",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productID\": \"6676bf3abcd7eee8e25fbfaf\",\r\n    \"quantity\": 1,\r\n    \"qtyOperation\": \"add\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{server}}/cart/"
+			},
+			"response": [
+				{
+					"name": "Add Quantity in Item",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productID\":\"6676bf3abcd7eee8e25fbfad\",\r\n    \"quantity\": 10,\r\n    \"qtyOperation\": \"add\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{server}}/cart/"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "370"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"172-AfT87Ks61SoIk/5jGB2VsmVOE0w\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 22 Jun 2024 16:33:53 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 200,\n    \"data\": {\n        \"_id\": \"6676cc1aa5ce4dcbbec35f89\",\n        \"owner\": \"6676ac29837f6b4ba97ff375\",\n        \"cartItems\": [\n            {\n                \"item\": \"6676bf3abcd7eee8e25fbfad\",\n                \"quantity\": 11,\n                \"_id\": \"6676cc1aa5ce4dcbbec35f8a\"\n            }\n        ],\n        \"totalAmount\": 0,\n        \"createdAt\": \"2024-06-22T13:05:30.117Z\",\n        \"updatedAt\": \"2024-06-22T16:33:53.347Z\",\n        \"__v\": 0\n    },\n    \"message\": \"Item Quantity Modified Successfully Successfully\",\n    \"success\": true\n}"
+				},
+				{
+					"name": "Remove Quantity in Item",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productID\":\"6676bf3abcd7eee8e25fbfad\",\r\n    \"quantity\": 7,\r\n    \"qtyOperation\": \"remove\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{server}}/cart/"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "369"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"171-9qPdZCRKlU7Aj4JJH+mUkNauWFs\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 22 Jun 2024 16:34:23 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 200,\n    \"data\": {\n        \"_id\": \"6676cc1aa5ce4dcbbec35f89\",\n        \"owner\": \"6676ac29837f6b4ba97ff375\",\n        \"cartItems\": [\n            {\n                \"item\": \"6676bf3abcd7eee8e25fbfad\",\n                \"quantity\": 4,\n                \"_id\": \"6676cc1aa5ce4dcbbec35f8a\"\n            }\n        ],\n        \"totalAmount\": 0,\n        \"createdAt\": \"2024-06-22T13:05:30.117Z\",\n        \"updatedAt\": \"2024-06-22T16:34:23.325Z\",\n        \"__v\": 0\n    },\n    \"message\": \"Item Quantity Modified Successfully Successfully\",\n    \"success\": true\n}"
+				},
+				{
+					"name": "Remove Quantity In Item 2",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productID\": \"6676bf3abcd7eee8e25fbfaf\",\r\n    \"quantity\": 1,\r\n    \"qtyOperation\": \"remove\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{server}}/cart/"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "997"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3e5-QoSZq5mrFujyV5W1hp9yUDxCai0\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 22 Jun 2024 19:37:34 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 200,\n    \"data\": {\n        \"_id\": \"667714b3bb7019aa67a4ae1b\",\n        \"owner\": \"6676ac29837f6b4ba97ff375\",\n        \"cartItems\": [\n            {\n                \"itemID\": \"6676bf3abcd7eee8e25fbfaf\",\n                \"itemName\": \"Reebok Nano X1\",\n                \"itemDescription\": \"The Reebok Nano X1 is designed for high-performance training, offering stability and support.\",\n                \"itemPrice\": 14000.75,\n                \"itemImage\": \"https://images.unsplash.com/photo-1530389912609-9a007b3c38a4\",\n                \"quantity\": 2,\n                \"totalPrice\": 28001.5,\n                \"_id\": \"667714b3bb7019aa67a4ae1c\"\n            },\n            {\n                \"itemID\": \"6676bf3abcd7eee8e25fbfad\",\n                \"itemName\": \"Adidas Ultra boost 21\",\n                \"itemDescription\": \"The Adidas Ultra boost 21 features responsive cushioning and a lightweight design, perfect for runners.\",\n                \"itemPrice\": 18999.99,\n                \"itemImage\": \"https://images.unsplash.com/photo-1505248254168-1de4e1abfa78\",\n                \"quantity\": 2,\n                \"totalPrice\": 37999.98,\n                \"_id\": \"667714d76a30b486a4ebad16\"\n            }\n        ],\n        \"cartAmount\": 66001.48,\n        \"createdAt\": \"2024-06-22T18:15:15.513Z\",\n        \"updatedAt\": \"2024-06-22T19:37:34.859Z\",\n        \"__v\": 0\n    },\n    \"message\": \"Item Quantity Modified Successfully Successfully\",\n    \"success\": true\n}"
+				},
+				{
+					"name": "Add Quantity In Item 2",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productID\": \"6676bf3abcd7eee8e25fbfaf\",\r\n    \"quantity\": 1,\r\n    \"qtyOperation\": \"add\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{server}}/cart/"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "998"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3e6-2HF3HLGFE0keYWr+KBQbBdb4XZ4\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 22 Jun 2024 19:38:05 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 200,\n    \"data\": {\n        \"_id\": \"667714b3bb7019aa67a4ae1b\",\n        \"owner\": \"6676ac29837f6b4ba97ff375\",\n        \"cartItems\": [\n            {\n                \"itemID\": \"6676bf3abcd7eee8e25fbfaf\",\n                \"itemName\": \"Reebok Nano X1\",\n                \"itemDescription\": \"The Reebok Nano X1 is designed for high-performance training, offering stability and support.\",\n                \"itemPrice\": 14000.75,\n                \"itemImage\": \"https://images.unsplash.com/photo-1530389912609-9a007b3c38a4\",\n                \"quantity\": 3,\n                \"totalPrice\": 42002.25,\n                \"_id\": \"667714b3bb7019aa67a4ae1c\"\n            },\n            {\n                \"itemID\": \"6676bf3abcd7eee8e25fbfad\",\n                \"itemName\": \"Adidas Ultra boost 21\",\n                \"itemDescription\": \"The Adidas Ultra boost 21 features responsive cushioning and a lightweight design, perfect for runners.\",\n                \"itemPrice\": 18999.99,\n                \"itemImage\": \"https://images.unsplash.com/photo-1505248254168-1de4e1abfa78\",\n                \"quantity\": 2,\n                \"totalPrice\": 37999.98,\n                \"_id\": \"667714d76a30b486a4ebad16\"\n            }\n        ],\n        \"cartAmount\": 80002.23,\n        \"createdAt\": \"2024-06-22T18:15:15.513Z\",\n        \"updatedAt\": \"2024-06-22T19:38:05.599Z\",\n        \"__v\": 0\n    },\n    \"message\": \"Item Quantity Modified Successfully Successfully\",\n    \"success\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Cart Items",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{server}}/cart/"
+			},
+			"response": [
+				{
+					"name": "Get Cart Items",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "{{server}}/cart/"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1004"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3ec-fVM/JUTb7LkqZ2nrokpYN0kW2eA\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 22 Jun 2024 19:49:15 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 200,\n    \"data\": {\n        \"userCart\": [\n            {\n                \"_id\": \"667714b3bb7019aa67a4ae1b\",\n                \"owner\": \"6676ac29837f6b4ba97ff375\",\n                \"cartItems\": [\n                    {\n                        \"itemID\": \"6676bf3abcd7eee8e25fbfaf\",\n                        \"itemName\": \"Reebok Nano X1\",\n                        \"itemDescription\": \"The Reebok Nano X1 is designed for high-performance training, offering stability and support.\",\n                        \"itemPrice\": 14000.75,\n                        \"itemImage\": \"https://images.unsplash.com/photo-1530389912609-9a007b3c38a4\",\n                        \"quantity\": 3,\n                        \"totalPrice\": 42002.25,\n                        \"_id\": \"667714b3bb7019aa67a4ae1c\"\n                    },\n                    {\n                        \"itemID\": \"6676bf3abcd7eee8e25fbfad\",\n                        \"itemName\": \"Adidas Ultra boost 21\",\n                        \"itemDescription\": \"The Adidas Ultra boost 21 features responsive cushioning and a lightweight design, perfect for runners.\",\n                        \"itemPrice\": 18999.99,\n                        \"itemImage\": \"https://images.unsplash.com/photo-1505248254168-1de4e1abfa78\",\n                        \"quantity\": 2,\n                        \"totalPrice\": 37999.98,\n                        \"_id\": \"667714d76a30b486a4ebad16\"\n                    }\n                ],\n                \"cartAmount\": 80002.23,\n                \"createdAt\": \"2024-06-22T18:15:15.513Z\",\n                \"updatedAt\": \"2024-06-22T19:38:05.599Z\",\n                \"__v\": 0\n            }\n        ]\n    },\n    \"message\": \"Your Cart has Been Fetched Successfully\",\n    \"success\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "Clear/Remove All Cart Items",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "{{server}}/cart/"
+			},
+			"response": [
+				{
+					"name": "Clear or Remove All Cart Items",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{server}}/cart/"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1022"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3fe-kYk6bxzrU0GGQlANvWHgXZzAuvE\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 22 Jun 2024 19:50:03 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 200,\n    \"data\": {\n        \"deletedCartData\": {\n            \"_id\": \"667714b3bb7019aa67a4ae1b\",\n            \"owner\": \"6676ac29837f6b4ba97ff375\",\n            \"cartItems\": [\n                {\n                    \"itemID\": \"6676bf3abcd7eee8e25fbfaf\",\n                    \"itemName\": \"Reebok Nano X1\",\n                    \"itemDescription\": \"The Reebok Nano X1 is designed for high-performance training, offering stability and support.\",\n                    \"itemPrice\": 14000.75,\n                    \"itemImage\": \"https://images.unsplash.com/photo-1530389912609-9a007b3c38a4\",\n                    \"quantity\": 3,\n                    \"totalPrice\": 42002.25,\n                    \"_id\": \"667714b3bb7019aa67a4ae1c\"\n                },\n                {\n                    \"itemID\": \"6676bf3abcd7eee8e25fbfad\",\n                    \"itemName\": \"Adidas Ultra boost 21\",\n                    \"itemDescription\": \"The Adidas Ultra boost 21 features responsive cushioning and a lightweight design, perfect for runners.\",\n                    \"itemPrice\": 18999.99,\n                    \"itemImage\": \"https://images.unsplash.com/photo-1505248254168-1de4e1abfa78\",\n                    \"quantity\": 2,\n                    \"totalPrice\": 37999.98,\n                    \"_id\": \"667714d76a30b486a4ebad16\"\n                }\n            ],\n            \"cartAmount\": 80002.23,\n            \"createdAt\": \"2024-06-22T18:15:15.513Z\",\n            \"updatedAt\": \"2024-06-22T19:38:05.599Z\",\n            \"__v\": 0\n        }\n    },\n    \"message\": \"All Items From Your Cart Are Removed Successfully !!\",\n    \"success\": true\n}"
+				}
+			]
+		}
+	]
+}

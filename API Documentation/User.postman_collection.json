@@ -1,0 +1,378 @@
+{
+	"info": {
+		"_postman_id": "1181c542-cb8a-4342-b581-0e02d08fa42a",
+		"name": "User",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "33156513",
+		"_collection_link": "https://interstellar-shadow-108052.postman.co/workspace/Coder's-Mart~6c9dba5f-f5f2-4419-bac2-a400098e421c/collection/33156513-1181c542-cb8a-4342-b581-0e02d08fa42a?action=share&source=collection_link&creator=33156513"
+	},
+	"item": [
+		{
+			"name": "Create New User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"role\":\"customer\",\r\n    \"gender\" : \"male\",\r\n    \"phone\" : \"9087363784\",\r\n    \"name\" : \"sanjay\",\r\n    \"password\" : \"Sanjay@16\",\r\n    \"email\" : \"sanjay@gmail.com\",\r\n    \"addres\" : \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{server}}/user/register"
+			},
+			"response": [
+				{
+					"name": "Create New User",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"role\":\"customer\",\r\n    \"gender\" : \"male\",\r\n    \"phone\" : \"9087363784\",\r\n    \"name\" : \"sanjay\",\r\n    \"password\" : \"Sanjay@16\",\r\n    \"email\" : \"sanjay@gmail.com\",\r\n    \"addres\" : \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{server}}/user/register"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "365"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"16d-5Qc2G+OUUEsTD3rb8YUQ/MqTqKk\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 22 Jun 2024 10:49:13 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"role\": \"customer\",\n        \"gender\": \"male\",\n        \"phone\": 9087363784,\n        \"name\": \"sanjay\",\n        \"password\": \"$2b$10$fyEGwCWUvYdJfbAPMaiOpeUeA0VX3splziLpnRpRX/CqVg5i9hmkq\",\n        \"email\": \"sanjay@gmail.com\",\n        \"address\": \"\",\n        \"_id\": \"6676ac29837f6b4ba97ff375\",\n        \"createdAt\": \"2024-06-22T10:49:13.738Z\",\n        \"updatedAt\": \"2024-06-22T10:49:13.738Z\",\n        \"__v\": 0\n    },\n    \"message\": \"User Created Successfully\",\n    \"success\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "Login User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"sanjay@gmail.com\",\r\n    \"password\":\"Sanjay@16\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{server}}/user/login"
+			},
+			"response": [
+				{
+					"name": "Login User",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"sanjay@gmail.com\",\r\n    \"password\":\"Sanjay@16\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{server}}/user/login"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Njc2YWMyOTgzN2Y2YjRiYTk3ZmYzNzUiLCJlbWFpbCI6InNhbmpheUBnbWFpbC5jb20iLCJpYXQiOjE3MTkwNTM2NDAsImV4cCI6MTcxOTE0MDA0MH0.P5VeDc3IR5brblvaTcwA6_mZNiV-6ud2js7AV5yaBB0; Path=/; HttpOnly; Secure"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "612"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"264-5mQpo5E8mFdj8PpIu5aVrPvOaok\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 22 Jun 2024 10:54:00 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 200,\n    \"data\": {\n        \"user\": {\n            \"_id\": \"6676ac29837f6b4ba97ff375\",\n            \"role\": \"customer\",\n            \"gender\": \"male\",\n            \"phone\": 9087363784,\n            \"name\": \"sanjay\",\n            \"password\": \"$2b$10$fyEGwCWUvYdJfbAPMaiOpeUeA0VX3splziLpnRpRX/CqVg5i9hmkq\",\n            \"email\": \"sanjay@gmail.com\",\n            \"address\": \"\",\n            \"createdAt\": \"2024-06-22T10:49:13.738Z\",\n            \"updatedAt\": \"2024-06-22T10:49:13.738Z\",\n            \"__v\": 0\n        },\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Njc2YWMyOTgzN2Y2YjRiYTk3ZmYzNzUiLCJlbWFpbCI6InNhbmpheUBnbWFpbC5jb20iLCJpYXQiOjE3MTkwNTM2NDAsImV4cCI6MTcxOTE0MDA0MH0.P5VeDc3IR5brblvaTcwA6_mZNiV-6ud2js7AV5yaBB0\"\n    },\n    \"message\": \"User Logged In Successfully\",\n    \"success\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Current User",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{server}}/user/get"
+			},
+			"response": [
+				{
+					"name": "Get Current User",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "{{server}}/user/get"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "325"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"145-iODAiDq9Iz6WtI5HSDtdF6WlzQw\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 22 Jun 2024 10:54:52 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 200,\n    \"data\": {\n        \"user\": {\n            \"_id\": \"6676ac29837f6b4ba97ff375\",\n            \"role\": \"customer\",\n            \"gender\": \"male\",\n            \"phone\": 9087363784,\n            \"name\": \"sanjay\",\n            \"email\": \"sanjay@gmail.com\",\n            \"address\": \"\",\n            \"createdAt\": \"2024-06-22T10:49:13.738Z\",\n            \"updatedAt\": \"2024-06-22T10:49:13.738Z\",\n            \"__v\": 0\n        }\n    },\n    \"message\": \"Current User Fetched Successfully\",\n    \"success\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "Logout User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": "{{server}}/user/logout"
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": "{{server}}/user/logout"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "token=; Path=/; Expires=Thu, 01 Jan 1970 00:00:00 GMT; HttpOnly; Secure"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "83"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"53-vHHXEY8q97Y+dyFwB5ZHxu2Liuc\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 22 Jun 2024 10:55:32 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 200,\n    \"data\": {},\n    \"message\": \"User Logout Successfully !!\",\n    \"success\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "Update User Details",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"gender\" : \"male\",\r\n    \"phone\" : \"9087363784\",\r\n    \"name\" : \"Sanjay Sukhwani\",\r\n    \"email\" : \"sanjay@gmail.com\",\r\n    \"address\" : \"Home, Earth\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{server}}/user/update"
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"gender\" : \"male\",\r\n    \"phone\" : \"9087363784\",\r\n    \"name\" : \"Sanjay Sukhwani\",\r\n    \"email\" : \"sanjay@gmail.com\",\r\n    \"address\" : \"Home, Earth\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{server}}/user/update"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "347"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"15b-SMfu/t5eHRiDkbU1eSYINHzTFLU\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 22 Jun 2024 11:01:54 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 200,\n    \"data\": {\n        \"_id\": \"6676ac29837f6b4ba97ff375\",\n        \"role\": \"customer\",\n        \"gender\": \"male\",\n        \"phone\": 9087363784,\n        \"name\": \"Sanjay Sukhwani\",\n        \"email\": \"sanjay@gmail.com\",\n        \"address\": \"Home, Earth\",\n        \"createdAt\": \"2024-06-22T10:49:13.738Z\",\n        \"updatedAt\": \"2024-06-22T11:01:54.015Z\",\n        \"__v\": 0\n    },\n    \"message\": \"User Account Details Updated Successfully !!\",\n    \"success\": true\n}"
+				}
+			]
+		}
+	]
+}

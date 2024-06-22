@@ -1,0 +1,29 @@
+{
+	"info": {
+		"_postman_id": "ac646b32-1430-4206-9a79-08d8699a5a1f",
+		"name": "Test Route",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "33156513",
+		"_collection_link": "https://interstellar-shadow-108052.postman.co/workspace/Coder's-Mart~6c9dba5f-f5f2-4419-bac2-a400098e421c/collection/33156513-ac646b32-1430-4206-9a79-08d8699a5a1f?action=share&source=collection_link&creator=33156513"
+	},
+	"item": [
+		{
+			"name": "Testing Route",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{server}}/test/server"
+			},
+			"response": []
+		},
+		{
+			"name": "Testing Error Route",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{server}}/test/error"
+			},
+			"response": []
+		}
+	]
+}
