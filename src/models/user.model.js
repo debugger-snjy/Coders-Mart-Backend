@@ -7,11 +7,12 @@ const userSchema = new Schema(
         role: {
             type: String,
             required: true,
-            enum: ["user", "admin", "employee"],
+            enum: ["customer", "admin", "employee"],
             default: "user"
         },
         gender: {
             type: String,
+            enum: ["male", "female", "others"],
             required: true,
         },
         phone: {
