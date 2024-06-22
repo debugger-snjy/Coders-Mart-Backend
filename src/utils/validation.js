@@ -37,36 +37,11 @@ const isMinMaxLengthValid = (text = "", minLen = 3, maxLen = 100) => {
  * Function to Check Whether the Password is Valid or not
  *
  * @param {text} password Password String
- * @param {number} [minLen=8] Minimum Length of the Password String (default=8)
- * @param {number} [maxLen=25] Maximum Length of the Password String (default=25)
- * @param {boolean} [specialAllowed=true] Whether Special Characters are Allowed (default=true)
- * @param {boolean} [numberAllowed=true] Whether Numbers are Allowed (default=true)
- * @param {boolean} [lowercase=true] Whether lowercase is Allowed (default=true)
- * @param {boolean} [uppercase=true] Whether uppercase is Allowed (default=true)
  * @returns {boolean} Returns True if Valid Password as per provided values, otherwise false
  */
-const isValidPassword = (password, minLen = 8, maxLen = 25, specialAllowed = true, numberAllowed = true, lowercase = true, uppercase = true) => {
+const isValidPassword = (password) => {
 
-    let passwordRegexp;
-    let allowedChars = "";
-
-    if (lowercase) {
-        allowedChars += `a-z`
-    }
-
-    if (uppercase) {
-        allowedChars += `A-Z`
-    }
-
-    if (numberAllowed) {
-        allowedChars += `0-9`
-    }
-
-    if (specialAllowed) {
-        allowedChars += ` !"#$%&'()*+,-./:;<=>?@[\\]^_\`{|}~`
-    }
-
-    passwordRegexp = RegExp(`^[${allowedChars}]{${minLen},${maxLen}}$`)
+    let passwordRegexp = RegExp(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/);
     console.log(passwordRegexp.source);
 
     return passwordRegexp.test(password)
@@ -104,6 +79,57 @@ const isEmptyField = (value) => {
 
 
 // ====================================================================================================================================================
+// MARK: Function to Check Valid Phone
+/**
+* Function to Check for Phone Validation
+ *
+ * @param {string} phone String to be checked for the Phone number
+ * @returns {boolean} Returns True if a Valid Phone Number, otherwise false
+ */
+const isValidPhoneNumber = (phone) => {
+
+    let phoneRegexp = /^[7-9]{1}[0-9]{9}$/;
+    return phoneRegexp.test(phone);
+
+}
+
+
+
+/**
+ * Function to Check For Validation for all Fields Empty or not
+ *
+ * @param {object} allFields Object that have key-value pair, key will be field name and the value will be the value of that field
+ * @returns {object} Returns Object with isEmpty and message
+ */
+const isAnyFieldEmpty = (allFields) => {
+
+    let emptyFields = [];
+    let message = "";
+    let isEmpty = false;
+
+    Object.keys(allFields).forEach((field) => {
+
+        if (allFields[field].trim() === "" || allFields[field] === "") {
+            emptyFields.push(field[0].toUpperCase() + field.slice(1).toLowerCase());
+            isEmpty = true;
+        }
+    })
+
+    if (emptyFields.length === 1) {
+        message = emptyFields[0] + " is Empty"
+    }
+    else if (emptyFields.length > 1) {
+        message = emptyFields.join(", ") + " are Empty !!"
+    }
+    else if (emptyFields.length === 0) {
+        message = "All Fields are Filled";
+    }
+
+    return { isEmpty, message };
+}
+
+
+// ====================================================================================================================================================
 // MARK: Exporting all Functions
 export {
     isEmailValid,
@@ -111,4 +137,6 @@ export {
     isValidPassword,
     isValidName,
     isEmptyField,
+    isValidPhoneNumber,
+    isAnyFieldEmpty
 }
