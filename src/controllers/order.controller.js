@@ -22,11 +22,15 @@ const addNewOrder = asyncPromiseHandler(async (req, res) => {
 
     // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     // Getting the Data From the API Request Body
-    const { paymentMode = "" } = req.body;
+    const { paymentMode = "", address = "" } = req.body;
 
     if (isEmptyField(paymentMode) || !(paymentMode === "CHEQUE" || paymentMode === "CASH")) {
         console.log("[src/controllers/order.controller.js] Error : Payment Mode is Empty or Invalid ");
         return new APIError(400, "Payment Mode is Empty or Invalid ").send(res);
+    }
+    if (isEmptyField(address)) {
+        console.log("[src/controllers/order.controller.js] Error : Address is Empty or Invalid ");
+        return new APIError(400, "Address is Empty or Invalid ").send(res);
     }
 
     // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -71,7 +75,8 @@ const addNewOrder = asyncPromiseHandler(async (req, res) => {
         owner: loggedInUser._id,
         orderItems: cartData[0].cartItems,
         orderAmount: cartData[0].cartAmount,
-        paymentMode: paymentMode
+        paymentMode: paymentMode,
+        orderAddress: address
     })
 
     if (!newOrder) {

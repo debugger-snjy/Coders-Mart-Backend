@@ -531,8 +531,13 @@ const getUserCart = asyncPromiseHandler(async (req, res) => {
     ]);
 
     if (userCart.length === 0) {
-        console.log("[src/controllers/cart.controller.js] Error : No Cart Data Found !!");
-        return new APIError(400, "No Cart Data Found !!").send(res);
+        console.log("[src/controllers/cart.controller.js] No Cart Data Found !!");
+
+        return res
+            .status(200)
+            .json(
+                new APIResponse(200, { userCart }, "You Don't Have added any item in Cart !!")
+            )
     }
 
     return res

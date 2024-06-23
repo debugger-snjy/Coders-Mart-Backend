@@ -49,6 +49,11 @@ const orderSchema = new Schema(
             default: 0
         },
 
+        orderAddress: {
+            type: String,
+            required: true,
+        },
+
         paymentMode: {
             type: String,
             enum: ["CHEQUE", "CASH"],
