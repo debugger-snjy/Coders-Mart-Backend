@@ -133,10 +133,39 @@ const getAllProducts = asyncPromiseHandler(async (req, res, next) => {
 });
 
 
+// ======================================================================================================================
+// MARK: Function to Fetch Products
+const getProduct = asyncPromiseHandler(async (req, res, next) => {
+
+    const { id } = req.params;
+
+    const product = await Product.find({ _id: id });
+    console.log("[src/controllers/product.controller.js] Product : ",product)
+
+    if (!product) {
+        console.log("[src/controllers/product.controller.js] Error : No Products Found ");
+        return new APIError(400, "No Products Found !!").send(res);
+    }
+
+    // Returning the Response
+    return res
+        .status(200)
+        .json(
+            new APIResponse(
+                200,
+                {
+                    product: product[0]
+                },
+                "Product Fetched Successfully"
+            )
+        );
+
+});
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Exporting the Functions
 export {
     addStaticProducts,
-    getAllProducts
+    getAllProducts,
+    getProduct
 }
