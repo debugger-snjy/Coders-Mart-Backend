@@ -68,7 +68,7 @@ const addItemsInCart = asyncPromiseHandler(async (req, res) => {
 
     // find() always returns an Array
     const isCartOfUserExists = await Cart.find({
-        owner: loggedInUser
+        owner: loggedInUser._id
     });
 
     console.log(isCartOfUserExists)
