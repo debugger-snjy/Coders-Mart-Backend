@@ -20,7 +20,7 @@ const addStaticProducts = asyncPromiseHandler(async (req, res) => {
             "productPrice": 1899.99,
             "productDescription": "The Adidas Ultra boost 21 features responsive cushioning and a lightweight design, perfect for runners.",
             "productImage": "https://images.unsplash.com/photo-1505248254168-1de4e1abfa78",
-            "productInStock": 90
+            "productInStock": 2
         },
         {
             "productName": "Puma RS-X",
@@ -41,14 +41,14 @@ const addStaticProducts = asyncPromiseHandler(async (req, res) => {
             "productPrice": 1799.50,
             "productDescription": "The New Balance 990v5 blends classic style with modern comfort, featuring premium materials and cushioning.",
             "productImage": "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a",
-            "productInStock": 83
+            "productInStock": 23
         },
         {
             "productName": "Asics Gel-Kayano 27",
             "productPrice": 1600.00,
             "productDescription": "The Asics Gel-Kayano 27 provides excellent stability and cushioning for long-distance running.",
             "productImage": "https://images.unsplash.com/photo-1605408499391-6368c628ef42",
-            "productInStock": 12
+            "productInStock": 15
         },
         {
             "productName": "Under Armour HOVR Phantom",
@@ -62,21 +62,21 @@ const addStaticProducts = asyncPromiseHandler(async (req, res) => {
             "productPrice": 1500.00,
             "productDescription": "The Brooks Ghost 13 features DNA LOFT cushioning for a smooth and stable ride.",
             "productImage": "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a",
-            "productInStock": 100
+            "productInStock": 30
         },
         {
             "productName": "Hoka One One Clifton 7",
             "productPrice": 1650.45,
             "productDescription": "The Hoka One One Clifton 7 provides lightweight comfort and a smooth ride.",
             "productImage": "https://images.unsplash.com/photo-1562183241-b937e95585b6",
-            "productInStock": 26
+            "productInStock": 3
         },
         {
             "productName": "Saucony Endorphin Speed",
             "productPrice": 1850.00,
             "productDescription": "The Saucony Endorphin Speed features a responsive nylon plate and PWRRUN PB cushioning.",
             "productImage": "https://images.unsplash.com/photo-1595341888016-a392ef81b7de",
-            "productInStock": 45
+            "productInStock": 11
         },
     ]
 

@@ -11,6 +11,9 @@ import Order from "../models/order.model.js";
 // Importing the Cart Model
 import Cart from "../models/cart.model.js";
 
+// Importing the Product Model
+import Product from "../models/product.model.js";
+
 // Importing the Empty Field Validation
 import { isEmptyField } from "../utils/validation.js";
 
@@ -69,6 +72,20 @@ const addNewOrder = asyncPromiseHandler(async (req, res) => {
 
     console.log("Cart Data : ", cartData);
     console.log("Cart Data : ", cartData[0].cartItems);
+
+    await Promise.all(
+        await cartData[0].cartItems.map(async (item) => {
+            await Product.findByIdAndUpdate(
+                item.itemID,
+                {
+                    $inc: {
+                        productInStock: -item.quantity
+                    }
+                }
+            )
+            console.log("Product Quantity Updated on Ordering !!");
+        })
+    )
 
     // Adding the Orders in the Database
     const newOrder = await Order.create({
