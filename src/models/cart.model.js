@@ -39,6 +39,9 @@ const CartSchema = new Schema(
                 },
                 totalPrice:{
                     type:Number,
+                },
+                itemInStock:{
+                    type:Number,
                 }
             }
         ],

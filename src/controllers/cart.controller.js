@@ -82,6 +82,7 @@ const addItemsInCart = asyncPromiseHandler(async (req, res) => {
         itemDescription: productData.productDescription,
         itemPrice: productData.productPrice,
         itemImage: productData.productImage,
+        itemInStock: productData.productInStock,
     }
 
     let isProductAlreadyExists = false;
@@ -92,7 +93,12 @@ const addItemsInCart = asyncPromiseHandler(async (req, res) => {
         const updatedCartItems = isCartOfUserExists[0].cartItems.map((cartitem) => {
 
             if (cartitem.itemID._id.toString() === productID) {
-                cartitem.quantity += newCartItem.quantity;
+                if ((cartitem.quantity + newCartItem.quantity) > productData.productInStock) {
+                    cartitem.quantity = productData.productInStock
+                }
+                else {
+                    cartitem.quantity += newCartItem.quantity;
+                }
                 cartitem.totalPrice += newCartItem.totalPrice
                 isProductAlreadyExists = true;
             }
