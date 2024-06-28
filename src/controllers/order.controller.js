@@ -127,7 +127,9 @@ const addNewOrder = asyncPromiseHandler(async (req, res) => {
 // MARK: Function to Fetch Orders
 const getAllOrders = asyncPromiseHandler(async (req, res, next) => {
 
-    const allOrders = await Order.find({});
+    const allOrders = await Order.find({
+        owner: req.user._id
+    });
 
     if (!allOrders) {
         console.log("[src/controllers/order.controller.js] Error : No Orders Found !!");
